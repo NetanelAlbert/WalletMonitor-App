@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <item android:id="@+id/item_details_tracking"
+        android:title="מעקב חודשי">
+
+    </item>
+
+    <item android:id="@+id/item_details_setting"
+        android:title="הגדרות">
+
+    </item>
+
+    <item android:id="@+id/item_details_addExpense"
+        android:icon="@drawable/ic_add_expense"
+        android:title="דוח הוצאות"
+        app:showAsAction="always">
+
+    </item>
+
+
+</menu>

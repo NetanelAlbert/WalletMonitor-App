@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="albert.netanel.walletmonitor.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/categoriesSpinner1"
+                android:layout_width="67dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:spinnerMode="dialog" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="66dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="שילמתי על"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="36sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/currenciesSpinner1"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:spinnerMode="dialog"/>
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@android:style/Widget.DeviceDefault.Light.TextView"
+                android:layout_width="58dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="במטבע"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="36sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="194dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/timebutton1"
+                    android:layout_width="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|start"
+                    android:layout_weight="2"
+                    android:textSize="20dp"
+                    android:onClick="onTimeButtonClick" />
+
+                <Button
+                    android:id="@+id/datebutton1"
+                    android:layout_width="3dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:textSize="19dp"
+                    android:onClick="onDateButtonClick"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@android:style/Widget.DeviceDefault.Light.TextView"
+                android:layout_width="58dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="בתאריך"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="36sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        android:layout_weight="1"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/description_editText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="textPersonName"
+                android:maxLength="15"
+                android:hint="מה קניתי (15 תווים)"/>
+
+            <EditText
+                android:id="@+id/notice_editText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="center"
+                android:maxLength="60"
+                android:hint="הערות (60 תווים)"
+                android:inputType="textPersonName"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="89dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/amount_editText1"
+                android:layout_width="match_parent"
+                android:layout_height="143dp"
+
+                android:layout_gravity="center"
+                android:ems="10"
+                android:freezesText="true"
+                android:gravity="center"
+                android:hint="סכום"
+                android:inputType="numberDecimal"
+                android:textSize="36sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/putExpense_button1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/holo_blue_light"
+                android:text="הוסף"
+                android:textColor="@android:color/background_light"
+                android:textSize="36sp"
+                android:textStyle="bold|italic"
+                android:onClick="addExpense"/>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
+
+
+

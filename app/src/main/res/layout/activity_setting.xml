@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingActivity"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".SettingActivity"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/show_categories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showCategoriesLayout"
+            android:background="@drawable/ic_keyboard_arrow_left_black_24dp"/>
+
+        <Button
+            android:id="@+id/hide_categories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="hideCategoriesLayout"
+            android:background="@drawable/ic_keyboard_arrow_right_black_24dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="סעיפי הוצאה"
+            android:layout_weight="1"
+            android:textSize="35dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/categories_setting_layout"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SettingActivity"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:textSize="20dp"
+        android:text="לחץ לחיצה ארוכה כדי למחוק סעיף הוצאה"/>
+
+    <ListView
+        android:id="@+id/settingCategoriesList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".SettingActivity"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_add_black_24dp"
+            android:layout_gravity="center"
+            android:onClick="onAddCategory"/>
+
+        <EditText
+        android:id="@+id/addCategoryEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:textSize="20dp"
+        android:maxLength="20"
+        android:hint="סעיף הוצאה חדש" />
+
+       </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="שמור"
+        android:textSize="20dp"
+        android:onClick="onSaveCategoriesButton"/>
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".SettingActivity"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/show_currencies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showCurrenciesLayout"
+            android:background="@drawable/ic_keyboard_arrow_left_black_24dp"/>
+
+        <Button
+            android:id="@+id/hide_currencies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="hideCurrenciesLayout"
+            android:background="@drawable/ic_keyboard_arrow_right_black_24dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="מטבעות"
+            android:layout_weight="1"
+            android:textSize="35dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/currencies_setting_layout"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SettingActivity"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".SettingActivity"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/currencies_setting_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:spinnerMode="dialog" />
+
+        <TextView
+            android:text="מטבע ראשי:"
+            android:textSize="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="שמור"
+        android:textSize="20dp"
+        android:onClick="onSaveCurrencyButton"/>
+
+    <ProgressBar
+        android:id="@+id/saveCurrencyPB"
+        android:padding="50dp"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+    </LinearLayout>
+
+</LinearLayout>

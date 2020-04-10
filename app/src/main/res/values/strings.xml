@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">מחשבון הוצאות</string>
+    <string name="shared_preferences_key">key</string>
+    <string name="preference_last_category">category</string>
+    <string name="preference_last_currency">currency</string>
+    <string name="preference_primary_currency">primaryCurrency</string>
+    <string name="preference_last_forward_currency_priority">forwardCurrency</string>
+
+
+
+
+</resources>
